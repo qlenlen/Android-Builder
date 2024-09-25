@@ -1,0 +1,33 @@
+[
+  {
+    "kernelSource": {
+      "name": "kernel_samsung_dm3q",
+      "repo": "https://github.com/samsung-sm8550/kernel_samsung_sm8550",
+      "branch": "msm-5.15",
+      "device": "dm3q",
+      "defconfig": "vendor/kalama_GKI.config"
+    },
+    "toolchains": [
+      {
+        "name": "clang",
+        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r530567.tar.gz",
+        "binaryEnv": ["./bin"]
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "clang/bin/clang",
+      "externalCommands": {
+        "LLVM": "1",
+        "LLVM_IAS": "1"
+      }
+    },
+    "AnyKernel3": {
+      "use": false,
+      "release": true
+    },
+    "enableKernelSU": false,
+    "enableLXC": false
+  }
+]
